@@ -1,0 +1,16 @@
+10/02/2020 - 
+        HTTP:   
+                GET (LISTA)
+                POST(SALVA)
+                PUT(EDIT)
+                DELETE(ADIVINHA SÓ)
+                PROPRIEDADE TEXTO PADRÃO (PLACEHOLDER)
+
+12/02/2020 - 
+        JAVA: 
+                GetElementById("ID")
+                querySelector("ID")
+                document.getElementsByName("nome")
+                document.querySelector("#ID")
+                var app = document.getElementById("ID")
+                var inputEL = document.createElement("componente desejado")
