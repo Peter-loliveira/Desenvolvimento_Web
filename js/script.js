@@ -13,8 +13,7 @@ inputNome.setAttribute("placeholder", "Insira seu Nome")
 inputNome.setAttribute("id", "usuario")
 app.appendChild(inputNome)
 
-var quebraLinha = document.createElement("br")
-app.appendChild(quebraLinha)
+app.appendChild(document.createElement("br"))
 
 var inputSenha = document.createElement("input")
 inputSenha.setAttribute("type", "password")
@@ -22,9 +21,7 @@ inputSenha.setAttribute("placeholder", "Digite Sua Senha")
 inputSenha.setAttribute("id", "senha")
 app.appendChild(inputSenha)
 
-var quebraLinha2 = document.createElement("br")
-app.appendChild(quebraLinha2)
-
+app.appendChild(document.createElement("br"))
 
 var btEnviar = document.createElement("Button")
 btEnviar.innerHTML = "Aperte Aqui"
