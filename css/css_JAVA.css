@@ -1,0 +1,10 @@
+*{
+    margin: 0 auto;
+    border-radius: 3px;
+    border-color: chocolate;
+    margin: 3px;
+}
+
+input{
+    width: 200px;
+}

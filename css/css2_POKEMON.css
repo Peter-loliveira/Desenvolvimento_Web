@@ -1,0 +1,68 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    /* border: white 0px solid; */
+    /* border: 1px solid; */
+}
+
+form {
+    background-color: #1586864b;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    margin-top: 20px;
+    border-radius: 15px 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#nome input {
+    width: 300px;
+    margin-left: 10px;
+}
+
+#status input {
+    width: 60px;
+}
+
+#status, #evoluido {
+    text-align: center;
+}
+
+#evoluido {
+    float: right;
+    margin-top: -56px;
+    margin-right: 50px;
+}
+
+textarea {
+    vertical-align: top;
+    width: 285px;
+}
+
+#tipos select {
+    width: 305px;
+    margin-left: 22px;
+}
+
+button {
+    font-weight: bold;
+    margin-left: 170px;
+    font-size: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 70px;
+    border: 0px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: red;
+    color: seashell;
+}
+
+.item {
+    width: 130px;
+}
