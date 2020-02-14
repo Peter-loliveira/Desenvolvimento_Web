@@ -72,10 +72,22 @@ btCriarComponentes.setAttribute("onclick", "gerar()")
 btCriarComponentes.innerHTML = "Gerar"
 divRepete.appendChild(btCriarComponentes)
 
+// //Componente SELECT para determinar o tipo de componente a ser inserido
+// var slTipoComponente = document.createComment("select")
+// slTipoComponente.setAttribute("id", "componentes")
+// var slPption1 = document.createElement("option");
+// slPption1.value = "label"
+// slPption1.text = "LABEL"
+// var slPption2 = document.createElement("option");
+// slPption1.value = "button"
+// slPption1.text = "BOTÃO"
+// divRepete.appendChild(slTipoComponente)
+
 // Area em que os componentes criados aparecerão
 var divComponentes = document.createElement("div")
 divComponentes.setAttribute("id", "AreaComponentes")
 divRepete.appendChild(divComponentes)
+
 
 // INICIO DAS funções
 var usuario = "Peter"
@@ -91,10 +103,10 @@ function checaLogin() {
 
 function gerar() {
     let x = parseFloat(document.getElementById("quantidade").value)
-    for (let i = 1; i <= x; i++) {
-        // alert(i)
+    for (let i = 1; i <= x; i++) {        
         var btGerado = document.createElement("button")
+        btGerado.setAttribute("class", "botaoGerado")
         btGerado.innerHTML = "Botão " + i
-        divComponentes.appendChild(btGerado)        
+        divComponentes.appendChild(btGerado)         
     }
 }

@@ -39,6 +39,11 @@ button:hover{
     color: black;
 }
 
+.botaoGerado:hover{
+    margin-top: 50px;
+    background-color: blue;
+}
+
 #quantidade{
     width: 50px;
 }
