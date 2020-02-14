@@ -63,4 +63,5 @@ inputTotalComponentes.setAttribute("type", "number")
 inputTotalComponentes.setAttribute("placeholder", "Insira o total de elementos a serem criados")
 divRepeticoes.appendChild(inputTotalComponentes)
 divRepeticoes.appendChild(document.createElement("br"))
+divRepeticoes.appendChild(document.createElement("br"))
 
