@@ -39,6 +39,10 @@ button:hover{
     color: black;
 }
 
+.botaoGerado{
+    width: 140px;
+}
+
 .botaoGerado:hover{
     margin-top: 50px;
     background-color: blue;

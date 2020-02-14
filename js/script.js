@@ -101,12 +101,31 @@ function checaLogin() {
     }
 }
 
+// function gerar() {
+//     let x = parseFloat(document.getElementById("quantidade").value)
+//     for (let i = 1; i <= x; i++) {
+//         var btGerado = document.createElement("button")
+//         btGerado.setAttribute("class", "botaoGerado")
+//         btGerado.innerHTML = "Botão " + i
+//         divComponentes.appendChild(btGerado)
+//     }
+// }
+
 function gerar() {
     let x = parseFloat(document.getElementById("quantidade").value)
-    for (let i = 1; i <= x; i++) {        
+    for (let i = 1; i <= x; i++) {
         var btGerado = document.createElement("button")
         btGerado.setAttribute("class", "botaoGerado")
-        btGerado.innerHTML = "Botão " + i
-        divComponentes.appendChild(btGerado)         
+
+        if (i < 10) {
+            btGerado.innerHTML = "Botão 00" + i
+        } else {
+            if ((i >= 10) && (i < 100)) {
+                btGerado.innerHTML = "Botão 0" + i
+            } else {
+                btGerado.innerHTML = "Botão " + i
+            }
+        }
+        divComponentes.appendChild(btGerado)
     }
 }
