@@ -1,6 +1,6 @@
 *{
     margin: 0 auto;
-    border-radius: 3px;
+    border-radius: 5px;
     border-color: chocolate;
     margin: 3px;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,21 +10,49 @@ input{
     width: 200px;
 }
 
+#APP{
+    background-color: #6494ed8a;
+    padding: 10px;
+}
+
+.Areas{
+    background-color: cornsilk;
+}
+
 div{
-    border: 1px solid black;
+    border: 1px solid #006400a4;
     text-align: center;  
 }
 
 button{
     border: 0px;
-    background-color: burlywood;
+    background-color: red;
     font-size: 15px;
     padding: 10px 20px;
     border-radius: 3px;
+    font-weight: bold;
+    color: white;
 }
 
 button:hover{
-    background-color: crimson;
-    color: white;
-    font-weight: bold;
+    background-color: #21a021ce;
+    color: black;
+}
+
+#quantidade{
+    width: 50px;
+}
+
+#AreaLogin{
+    padding: 15px 0px;
+}
+
+#AreaRepeticao{
+    margin-top: 10px;
+}
+
+#AreaComponentes{
+    /* height: 50px; */
+    background-color: #ff69b450;
+    padding: 10px;
 }

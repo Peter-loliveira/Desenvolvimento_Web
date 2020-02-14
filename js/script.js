@@ -6,62 +6,95 @@
 // Area geral do site
 var app = document.getElementById("APP")
 
+{
+    var divLogin = document.createElement("div")
+    divLogin.setAttribute("id", "AreaLogin")
+    divLogin.setAttribute("class", "Areas")
+    app.appendChild(divLogin)
+}
+
 var lbTituloLogin = document.createElement("h2")
 lbTituloLogin.innerHTML = "LOGIN"
-app.appendChild(lbTituloLogin)
+divLogin.appendChild(lbTituloLogin)
 
+//Label NOME
 var lbNome = document.createElement("label")
 lbNome.innerHTML = "Nome: "
-app.appendChild(lbNome)
-// Cria o primeiro INPUT da area de login
+divLogin.appendChild(lbNome)
+
+//  INPUT Nome
 var inputNome = document.createElement("input")
 inputNome.setAttribute("type", "Text")
 inputNome.setAttribute("placeholder", "Insira seu Nome")
 inputNome.setAttribute("id", "usuario")
-app.appendChild(inputNome)
+divLogin.appendChild(inputNome)
 
-app.appendChild(document.createElement("br"))
-
+// Label SENHA
 var lbSenha = document.createElement("label")
 lbSenha.innerHTML = "Senha: "
-app.appendChild(lbSenha)
+divLogin.appendChild(lbSenha)
+
+//INPUT Senha
 var inputSenha = document.createElement("input")
 inputSenha.setAttribute("type", "password")
 inputSenha.setAttribute("placeholder", "Digite Sua Senha")
 inputSenha.setAttribute("id", "senha")
-app.appendChild(inputSenha)
+divLogin.appendChild(inputSenha)
 
-app.appendChild(document.createElement("br"))
-
+// Botaõ Logar
 var btEnviar = document.createElement("Button")
-btEnviar.innerHTML = "Aperte Aqui"
+btEnviar.innerHTML = "LOGAR"
 btEnviar.setAttribute("onclick", "checaLogin()")
-app.appendChild(document.createElement("br"))
-app.appendChild(btEnviar)
-app.appendChild(document.createElement("br"))
+divLogin.appendChild(btEnviar)
+//Fim da Area de Login
 
+// DIV interna separando a área com a função de criar elementos de acordo com o valor digitado
+var divRepete = document.createElement("div")
+divRepete.setAttribute("id", "AreaRepeticao")
+divRepete.setAttribute("class", "Areas")
+app.appendChild(divRepete)
+
+//Label Quantidade
+var h2Titulo = document.createElement("h2")
+h2Titulo.innerHTML = "Quantos conjuntos de componentes devem ser criados?"
+divRepete.appendChild(h2Titulo)
+
+// Input NUNBER para colocar o total de elementos a serem criados na página
+var inputTotalComponentes = document.createElement("input")
+inputTotalComponentes.setAttribute("type", "number")
+inputTotalComponentes.setAttribute("id", "quantidade")
+divRepete.appendChild(inputTotalComponentes)
+divRepete.appendChild(document.createElement("br"))
+
+// Botão para criar os componentes
+var btCriarComponentes = document.createElement("button")
+btCriarComponentes.setAttribute("onclick", "gerar()")
+btCriarComponentes.innerHTML = "Gerar"
+divRepete.appendChild(btCriarComponentes)
+
+// Area em que os componentes criados aparecerão
+var divComponentes = document.createElement("div")
+divComponentes.setAttribute("id", "AreaComponentes")
+divRepete.appendChild(divComponentes)
+
+// INICIO DAS funções
 var usuario = "Peter"
 var senha = "123"
+
 function checaLogin() {
-    
-    if ((usuario === inputNome.value) && (senha === inputSenha.value)){
+    if ((usuario === inputNome.value) && (senha === inputSenha.value)) {
         alert("Login efetuado com sucesso")
     } else {
         alert("Bote os dados certos mané")
     }
 }
 
-app.appendChild(document.createElement("br"))
-
-var divRepeticoes = document.createElement("div")
-divRepeticoes.setAttribute("id", "AreaRepeticao")
-app.appendChild(divRepeticoes)
-divRepeticoes.appendChild(document.createElement("br"))
-
-var inputTotalComponentes = document.createElement("input")
-inputTotalComponentes.setAttribute("type", "number")
-inputTotalComponentes.setAttribute("placeholder", "Insira o total de elementos a serem criados")
-divRepeticoes.appendChild(inputTotalComponentes)
-divRepeticoes.appendChild(document.createElement("br"))
-divRepeticoes.appendChild(document.createElement("br"))
-
+function gerar() {
+    let x = parseFloat(document.getElementById("quantidade").value)
+    for (let i = 1; i <= x; i++) {
+        // alert(i)
+        var btGerado = document.createElement("button")
+        btGerado.innerHTML = "Botão " + i
+        divComponentes.appendChild(btGerado)        
+    }
+}
