@@ -116,7 +116,6 @@ function gerar() {
     for (let i = 1; i <= x; i++) {
         var btGerado = document.createElement("button")
         btGerado.setAttribute("class", "botaoGerado")
-
         if (i < 10) {
             btGerado.innerHTML = "Botão 00" + i
         } else {
