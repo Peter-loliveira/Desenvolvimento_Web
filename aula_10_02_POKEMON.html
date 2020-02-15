@@ -12,12 +12,16 @@
     <form id="formBasico" action="">
         <h1>PokeSystem</h1>
         <div id="nome">
-            <label for="">Nome:</label>
-            <input type="text" placeholder="Digite o nome de seu pokemon">
+            <div class="comprimetoLabel">
+                <label for="">Nome:</label>
+            </div>
+            <input class="tamanho" type="text" placeholder="Digite o nome de seu pokemon">
         </div>
         <div id="tipos">
-            <label for="">Tipo:</label>
-            <select id="escravos">
+            <div class="comprimetoLabel">
+                <label for="">Tipo:</label>
+            </div>
+            <select class="tamanho" id="escravos">
                 <option value="">-- Selecione</option>
                 <option value="Eletrico">Eletríco</option>
                 <option value="Fogo">Fogo</option>
@@ -29,28 +33,32 @@
                 <option value="Babaca">Babaca</option>
             </select>
         </div>
-        <div  id="poder">
+        <div id="poder">
             <div class="item" id="status" class>
-                <label for="">Ataque:</label>
-                <input type="number" name="" id="Ataque" placeholder="0 - 100">
-                <label for="">Defesa:</label>
-                <input type="number" name="" id="Defesa" placeholder="0 - 100">
+                <div class="comprimetoLabel">
+                    <label for="">Ataque:</label></div>
+                <input class="tamanho" type="number" name="" id="Ataque" placeholder="0 - 100">
+                <div class="comprimetoLabel">
+                    <label for="">Defesa:</label></div>
+                <input class="tamanho" type="number" name="" id="Defesa" placeholder="0 - 100">
             </div>
             <div class="item" id="evoluido">
                 <label for="">Evoluido</label>
                 <br>
                 <label><input type="radio" name="evoluido" id="cbSim" checked>Sim</label>
-                <label><input type="radio" name="evoluido" id="cbNim">Não</label>         
+                <label><input type="radio" name="evoluido" id="cbNim">Não</label>
             </div>
         </div>
-        <div id="descricao">
-            <label>Descrição</label>
-            <textarea name="" cols="30" rows="10"
-                placeholder="Quais as caracteristicas desse pokemos?"></textarea>
-        </div>
+        <div id="descicao">
+            <div class="comprimetoLabel">
+                <label>Descrição</label>
+            </div>
+            <textarea class="tamanho" name="" cols="30" rows="10" placeholder="Quais as caracteristicas desse pokemos?"></textarea>
+        </div>        
         <button>Salvar</button>
     </form>
 </body>
 <!-- <script src="js/script.js"></sc
     ript> -->
+
 </html>
