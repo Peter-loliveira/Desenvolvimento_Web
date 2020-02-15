@@ -10,14 +10,14 @@
 
 <body>
     <form id="formBasico" action="">
-        <h1>PokeSystem</h1>
-        <div id="nome">
+        <h1 class="blocosExternos">PokeSystem</h1>
+        <div id="nome" class="blocosExternos">
             <div class="comprimetoLabel">
                 <label for="">Nome:</label>
             </div>
             <input class="tamanho" type="text" placeholder="Digite o nome de seu pokemon">
         </div>
-        <div id="tipos">
+        <div id="tipos" class="blocosExternos">
             <div class="comprimetoLabel">
                 <label for="">Tipo:</label>
             </div>
@@ -33,28 +33,32 @@
                 <option value="Babaca">Babaca</option>
             </select>
         </div>
-        <div id="poder">
-            <div class="item" id="status" class>
+        <div id="poder" class="blocosExternos">
+            <div class="item" id="status">
                 <div class="comprimetoLabel">
-                    <label for="">Ataque:</label></div>
-                <input class="tamanho" type="number" name="" id="Ataque" placeholder="0 - 100">
+                    <label for="">Ataque:</label>
+                </div>
+                <input class="inNumeros" type="number" name="" id="Ataque" placeholder="0 - 100">
                 <div class="comprimetoLabel">
-                    <label for="">Defesa:</label></div>
-                <input class="tamanho" type="number" name="" id="Defesa" placeholder="0 - 100">
+                    <label for="">Defesa:</label>
+                </div>
+                <input class="inNumeros" type="number" name="" id="Defesa" placeholder="0 - 100">
             </div>
             <div class="item" id="evoluido">
                 <label for="">Evoluido</label>
-                <br>
+
                 <label><input type="radio" name="evoluido" id="cbSim" checked>Sim</label>
                 <label><input type="radio" name="evoluido" id="cbNim">Não</label>
             </div>
         </div>
-        <div id="descicao">
+        <div id="descricao" class="blocosExternos">
             <div class="comprimetoLabel">
                 <label>Descrição</label>
             </div>
-            <textarea class="tamanho" name="" cols="30" rows="10" placeholder="Quais as caracteristicas desse pokemos?"></textarea>
-        </div>        
+            <div>
+                <textarea name="" cols="30" rows="10" placeholder="Quais as caracteristicas desse pokemos?"></textarea>
+            </div>
+        </div>
         <button>Salvar</button>
     </form>
 </body>

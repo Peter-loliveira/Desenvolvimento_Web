@@ -2,14 +2,14 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5px;
     border: black 1px solid;
-    /* border: 1px solid; */
 }
 
 form {
     background-color: #1586864b;
-    width: fit-content;
+    width: 600px;
+    /* width: fit-content; */
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 10px;
     margin-top: 20px;
     border-radius: 15px 0px;
 }
@@ -18,17 +18,8 @@ h1 {
     text-align: center;
 }
 
-/* #nome input {
-    width: 300px;
-    margin-left: 10px;
-}
-
-#status input {
-    width: 60px;
-} */
-
 .tamanho {
-    width: 100px;
+    width: 200px;
 }
 
 #status, #evoluido {
@@ -36,24 +27,19 @@ h1 {
 }
 
 #evoluido {
-    /* float: right; */
-    /* margin-top: -56px; */
-    margin-right: 50px;
+    float: right; 
+    text-align: center;
+    margin-left: 50px;
 }
 
 textarea {
     vertical-align: top;
-    width: 285px;
+    width: 400px;
+    float: right;
 }
 
 #poder {
     display: flex;
-}
-
-/* #tipos select {
-    width: 305px;
-    margin-left: 22px; */
-
 }
 
 button {
@@ -73,7 +59,7 @@ button:hover {
 }
 
 .item {
-    width: 130px;
+    width: 400px;
 }
 
 label {
@@ -81,7 +67,7 @@ label {
 }
 
 .comprimetoLabel {
-    width: 80px;
+    width: 100px;
     text-align: right;
 }
 
@@ -92,3 +78,13 @@ label {
 /* display: flex; alinhamento em lina
 width: fit-content; tamanho do pai = ao tamanho máximo dos filhos
 */
+
+.blocosExternos {
+    /* background-color: red; */
+    /* width: 400px; */
+    display: flex;
+}
+
+.inNumeros {
+    width: 80px;
+}

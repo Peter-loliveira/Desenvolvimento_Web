@@ -37,6 +37,7 @@ button{
 button:hover{
     background-color: #21a021ce;
     color: black;
+    transition: .3s;
 }
 
 .botaoGerado{
@@ -44,8 +45,7 @@ button:hover{
 }
 
 .botaoGerado:hover{
-    margin-top: 50px;
-    background-color: blue;
+    box-shadow: 5px 5px 16px 0px #422d2d;    
 }
 
 #quantidade{
