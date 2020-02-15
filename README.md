@@ -43,3 +43,6 @@
                 }else{
                     comandos
                 }
+15/02/2020 - 
+        GRIDS
+            Estudo dos GRIDS
