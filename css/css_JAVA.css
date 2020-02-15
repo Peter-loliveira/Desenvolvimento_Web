@@ -44,12 +44,12 @@ button:hover{
 }
 
 .botaoGerado:hover{
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background-color: blue;
 }
 
 #quantidade{
-    width: 50px;
+    width: 70px;
 }
 
 #AreaLogin{

@@ -63,6 +63,9 @@ divRepete.appendChild(h2Titulo)
 var inputTotalComponentes = document.createElement("input")
 inputTotalComponentes.setAttribute("type", "number")
 inputTotalComponentes.setAttribute("id", "quantidade")
+inputTotalComponentes.setAttribute("min", "100")
+inputTotalComponentes.setAttribute("max", "10000")
+
 divRepete.appendChild(inputTotalComponentes)
 divRepete.appendChild(document.createElement("br"))
 
@@ -71,17 +74,6 @@ var btCriarComponentes = document.createElement("button")
 btCriarComponentes.setAttribute("onclick", "gerar()")
 btCriarComponentes.innerHTML = "Gerar"
 divRepete.appendChild(btCriarComponentes)
-
-// //Componente SELECT para determinar o tipo de componente a ser inserido
-// var slTipoComponente = document.createComment("select")
-// slTipoComponente.setAttribute("id", "componentes")
-// var slPption1 = document.createElement("option");
-// slPption1.value = "label"
-// slPption1.text = "LABEL"
-// var slPption2 = document.createElement("option");
-// slPption1.value = "button"
-// slPption1.text = "BOTÃO"
-// divRepete.appendChild(slTipoComponente)
 
 // Area em que os componentes criados aparecerão
 var divComponentes = document.createElement("div")
@@ -110,10 +102,9 @@ function checaLogin() {
 //         divComponentes.appendChild(btGerado)
 //     }
 // }
-
 function gerar() {
     let x = parseFloat(document.getElementById("quantidade").value)
-    for (let i = 1; i <= x; i++) {
+    for (let i = 1; i <= x; i++) {        
         var btGerado = document.createElement("button")
         btGerado.setAttribute("class", "botaoGerado")
         if (i < 10) {
@@ -127,4 +118,5 @@ function gerar() {
         }
         divComponentes.appendChild(btGerado)
     }
+    
 }
