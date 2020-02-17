@@ -1,13 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5px;
-    border: black 1px solid;
 }
 
 form {
+    border: seagreen 2px solid;
     background-color: #1586864b;
-    width: 600px;
-    /* width: fit-content; */
+    width: 400px;
     margin: 0 auto;
     padding: 10px;
     margin-top: 20px;
@@ -19,7 +18,7 @@ h1 {
 }
 
 .tamanho {
-    width: 200px;
+    width: 300px;
 }
 
 #status, #evoluido {
@@ -27,33 +26,29 @@ h1 {
 }
 
 #evoluido {
-    float: right; 
+    float: right;
     text-align: center;
-    margin-left: 50px;
 }
 
 textarea {
     vertical-align: top;
-    width: 400px;
+    width: 300px;
     float: right;
 }
 
-#poder {
-    display: flex;
-}
-
-button {
-    font-weight: bold;
-    margin-left: 170px;
+.button {
+    font-weight: bold;    
     font-size: 15px;
     margin-top: 15px;
     border-radius: 5px;
     width: 70px;
     border: 0px;
     height: 30px;
+    text-align: center;
+    margin: 0 auto;
 }
 
-button:hover {
+.button:hover {
     background-color: red;
     color: seashell;
 }
@@ -63,7 +58,7 @@ button:hover {
 }
 
 label {
-    width: 150px;
+    margin-right: 10px;
 }
 
 .comprimetoLabel {
@@ -71,20 +66,19 @@ label {
     text-align: right;
 }
 
-#descricao {
-    display: flex;
-}
-
-/* display: flex; alinhamento em lina
-width: fit-content; tamanho do pai = ao tamanho máximo dos filhos
-*/
-
 .blocosExternos {
-    /* background-color: red; */
-    /* width: 400px; */
     display: flex;
 }
 
 .inNumeros {
     width: 80px;
+}
+
+.ataqueDefesa {
+    display: flex;    
+}
+
+#poder{
+    align-items: center;
+    justify-content: space-between;
 }

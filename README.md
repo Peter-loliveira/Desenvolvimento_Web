@@ -46,3 +46,8 @@
 15/02/2020 - 
         GRIDS
             Estudo dos GRIDS
+            max-width: 100%; /* deixa as imagens com o tamanho máximo do container delas e consequentemente RESPONSIVAS */
+            flex-wrap: wrap; /* verificar o que faz depois */
+            justify-content: space-between; /* Ajusta os componente que estiverem ho container de forma igual */
+            align-items: center; /*Alinha os item do conhteiner de forma centralizada na altura*/            
+            flex: 1 1 200px;/* verificar para que serve */
