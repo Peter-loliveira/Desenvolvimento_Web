@@ -3,21 +3,22 @@
     margin-bottom: 5px;
 }
 
-form {
+section {
     border: seagreen 2px solid;
     background-color: #1586864b;
     width: 400px;
     margin: 0 auto;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 10px;    
     border-radius: 15px 0px;
+    
 }
 
 h1 {
     text-align: center;
+    padding-bottom: 10px;
 }
 
-.tamanho {
+.tamanhoLabel {
     width: 300px;
 }
 
@@ -32,18 +33,18 @@ h1 {
 
 textarea {
     vertical-align: top;
-    width: 300px;
+    width: 295px;
     float: right;
 }
 
 .button {
     font-weight: bold;    
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 15px;
-    border-radius: 5px;
-    width: 70px;
+    border-radius: 4px;
+    width: 90px;
     border: 0px;
-    height: 30px;
+    height: 40px;
     text-align: center;
     margin: 0 auto;
 }
@@ -51,6 +52,9 @@ textarea {
 .button:hover {
     background-color: red;
     color: seashell;
+    transition: 2s;
+    box-shadow: 0px 0px 10px 10px #ff00009f;
+    border: black 1px solid;    
 }
 
 .item {
