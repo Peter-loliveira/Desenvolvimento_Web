@@ -1,8 +1,10 @@
 var qualquer = [6,2,4,5,8,7,4,10,56,326982,23.6]
 
-function recebeArra(qualquer) {
-    return qualquer    
+function recebeArray(x) {
+    return x
 }
+
+recebeArray(x)
 
 /*
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios

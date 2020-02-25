@@ -63,8 +63,8 @@ divRepete.appendChild(h2Titulo)
 var inputTotalComponentes = document.createElement("input")
 inputTotalComponentes.setAttribute("type", "number")
 inputTotalComponentes.setAttribute("id", "quantidade")
-inputTotalComponentes.setAttribute("min", "100")
-inputTotalComponentes.setAttribute("max", "10000")
+inputTotalComponentes.setAttribute("min", "10")
+inputTotalComponentes.setAttribute("max", "100")
 
 divRepete.appendChild(inputTotalComponentes)
 divRepete.appendChild(document.createElement("br"))
@@ -79,6 +79,32 @@ divRepete.appendChild(btCriarComponentes)
 var divComponentes = document.createElement("div")
 divComponentes.setAttribute("id", "AreaComponentes")
 divRepete.appendChild(divComponentes)
+
+var divInputNumero = document.createElement("div")
+divInputNumero.setAttribute("id", "AreaNumero")
+divInputNumero.setAttribute("class", "Areas")
+app.appendChild(divInputNumero)
+
+var lbNumero = document.createElement("h2")
+lbNumero.innerHTML = "Tamanho das Fonte"
+lbNumero.setAttribute("id", "numeros")
+divInputNumero.appendChild(lbNumero)
+
+var inpRangeNumero = document.createElement("input")
+inpRangeNumero.setAttribute("type", "range")
+inpRangeNumero.setAttribute("id", "intervalo")
+inpRangeNumero.setAttribute("value", "10")
+inpRangeNumero.setAttribute("min", "10")
+inpRangeNumero.setAttribute("max", "50")
+divInputNumero.appendChild(inpRangeNumero)
+
+var lbFonte = document.createElement("h2")
+lbFonte.innerHTML = "Fonte tamanho: "
+lbFonte.setAttribute("id", "tamanhoFonte")
+lbFonte.setAttribute("font-size", "50")
+divInputNumero.appendChild(lbFonte)
+
+
 
 
 // INICIO DAS funções
@@ -120,3 +146,4 @@ function gerar() {
     }
     
 }
+
