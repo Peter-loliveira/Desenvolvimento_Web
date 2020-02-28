@@ -84,8 +84,26 @@ algum hexa escolhido. Se for, retorne a frase:
 a frase:
 "Não temos o equivalente hexadecimal para [COR]."
 */
+// function convertToHex(digiteACor) {       
+//     let tabelaDeCores = {
+//         "red": "#ff0000",
+//         "green": "#00ff00",
+//         "blue": "#0000ff",
+//         "yellow": "#ffff00",
+//         "white": "#ffffff",
+//         "black": "#000000"
+//     }
+//     switch (digiteACor) {        
+//         case undefined:
+//             return `Não temos o equivalente hexadecimal para '${digiteACor}'.`
+//             break 
+//         default:
+//             return `O hexadecimal para a cor '${digiteACor}' é ${tabelaDeCores[digiteACor]}."`
+//             break;
+//     }
+// }
 
-function convertToHex(digiteACor) {       
+function convertToHex(digiteACor) {
     let tabelaDeCores = {
         "red": "#ff0000",
         "green": "#00ff00",
@@ -94,13 +112,17 @@ function convertToHex(digiteACor) {
         "white": "#ffffff",
         "black": "#000000"
     }
-    switch (digiteACor) {        
+    switch (digiteACor) {
         case undefined:
-            return `Não temos o equivalente hexadecimal para '${digiteACor}'.`
-            break 
+            return `Não foi digitada uma cor`
+            break
         default:
-            return `O hexadecimal para a cor '${digiteACor}' é ${tabelaDeCores[digiteACor]}."`
-            break;
+            if (tabelaDeCores[digiteACor] === undefined) {
+                return `A cor "${digiteACor}" não foi encontrada!`
+            } else {
+                return `O hexadecimal para a cor "'${digiteACor}'" é ${tabelaDeCores[digiteACor]}."`
+            }
+            break
     }
 }
 
