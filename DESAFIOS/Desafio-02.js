@@ -83,4 +83,4 @@ Crie uma função com as seguintes características:
 4. Se todos os argumentos forem passados, retorne a soma do primeiro com o segundo, e o resultado, dividido pelo terceiro.
 5. Se nenhum argumento for passado, retorne o valor booleano`false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne`null`.
- ===================================================================================
+*/
