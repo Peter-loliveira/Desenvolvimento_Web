@@ -8,9 +8,9 @@ section {
     background-color: #1586864b;
     width: 400px;
     margin: 0 auto;
-    padding: 10px;    
+    padding: 10px;
     border-radius: 15px 0px;
-    
+
 }
 
 h1 {
@@ -38,7 +38,7 @@ textarea {
 }
 
 .button {
-    font-weight: bold;    
+    font-weight: bold;
     font-size: 20px;
     margin-top: 15px;
     border-radius: 4px;
@@ -52,9 +52,9 @@ textarea {
 .button:hover {
     background-color: red;
     color: seashell;
-    transition: 2s;
+    transition: .3s;
     box-shadow: 0px 0px 10px 10px #ff00009f;
-    border: black 1px solid;    
+    border: black 1px solid;
 }
 
 .item {
@@ -79,10 +79,10 @@ label {
 }
 
 .ataqueDefesa {
-    display: flex;    
+    display: flex;
 }
 
-#poder{
+#poder {
     align-items: center;
     justify-content: space-between;
 }

@@ -6,12 +6,11 @@
 // Area geral do site
 var app = document.getElementById("APP")
 
-{
-    var divLogin = document.createElement("div")
-    divLogin.setAttribute("id", "AreaLogin")
-    divLogin.setAttribute("class", "Areas")
-    app.appendChild(divLogin)
-}
+var divLogin = document.createElement("div")
+divLogin.setAttribute("id", "AreaLogin")
+divLogin.setAttribute("class", "Areas")
+app.appendChild(divLogin)
+
 
 var lbTituloLogin = document.createElement("h2")
 lbTituloLogin.innerHTML = "LOGIN"
@@ -130,7 +129,7 @@ function checaLogin() {
 // }
 function gerar() {
     let x = parseFloat(document.getElementById("quantidade").value)
-    for (let i = 1; i <= x; i++) {        
+    for (let i = 1; i <= x; i++) {
         var btGerado = document.createElement("button")
         btGerado.setAttribute("class", "botaoGerado")
         if (i < 10) {
@@ -144,6 +143,6 @@ function gerar() {
         }
         divComponentes.appendChild(btGerado)
     }
-    
+
 }
 
