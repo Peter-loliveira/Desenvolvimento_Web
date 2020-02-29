@@ -1,4 +1,9 @@
 // var app = document.getElementById("APP")
+
+// document.body.style.border = "1px solid black"
+document.body.style.paddingBottom = "20px"
+document.body.style.borderRadius = "5px"
+
 var app = document.getElementById("Postit")
 app.style.width = "1400px"
 app.style.margin = "0 auto"
@@ -23,6 +28,7 @@ texto.style.fontWeight = "bold"
 var inpTexto = document.createElement("input")
 inpTexto.placeholder = "Texto do Postit"
 inpTexto.style.textAlign = "center"
+inpTexto.style.borderRadius = "5px"
 
 divComponentes.appendChild(divTextoPostit)
 
@@ -32,21 +38,33 @@ divOpacidadePostit.setAttribute("class", "divs-atributos")
 divOpacidadePostit.style.alignItems = "center"
 //Label
 var lbOpacidade = document.createElement("label")
-lbOpacidade.innerHTML = "Opacidade do Postit: "
+lbOpacidade.innerHTML = "Opacidade(max 70%): "
 lbOpacidade.style.fontWeight = "bold"
 //Input tipo range
 var inpOpacidade = document.createElement("input")
 inpOpacidade.setAttribute("type", "range")
-inpOpacidade.setAttribute("min", 30)
-inpOpacidade.setAttribute("max", 100)
+inpOpacidade.setAttribute("min", 0)
+inpOpacidade.setAttribute("max", 70)
 inpOpacidade.style.marginRight = "20px"
-inpOpacidade.value = "30"
+inpOpacidade.value = "0"//Deixa a barra de RANGE selecionada no inicio
+
+//Evento disparado quando mudamos o valor da opacidade POR MOUSE
 inpOpacidade.onclick = function () {
-    lbOpacidadeEscolhida.innerHTML = `${100 - inpOpacidade.value}%`
+    opacidade()
 }
-//label mostrando em quantos % o postit deverá aparecer
+//Evento disparado quando mudamos o valor da opacidade POR MOVIMENTO DO MOUSE
+inpOpacidade.onmousemove = function () {
+    opacidade()
+}
+//Evento disparado quando mudamos o valor da opacidade POR TECLADO
+inpOpacidade.onkeydown = function () {
+    opacidade()        
+}
+var totalOpacidade = inpOpacidade.value//Guarda o valor da opacidade
+
+//label mostrando em quantos % de opacidade o postit deverá aparecer
 var lbOpacidadeEscolhida = document.createElement("label")
-lbOpacidadeEscolhida.innerHTML = "70%"
+lbOpacidadeEscolhida.innerHTML = "0%"
 lbOpacidadeEscolhida.style.fontWeight = "bold"
 
 //insere a div de opacidade e totos os seus componentes na div de componentes
@@ -62,45 +80,47 @@ divComponentes.appendChild(divVisibilidadePostits)
 var lbVisualizarPostits = document.createElement("label")
 lbVisualizarPostits.innerHTML = "Ver Postits"
 lbVisualizarPostits.style.fontWeight = "bold"
+
 var cbVisualizarPostits = document.createElement("input")
 cbVisualizarPostits.setAttribute("type", "checkbox")
 cbVisualizarPostits.checked = true
 cbVisualizarPostits.onclick = function () {
     let exibePostits = document.getElementsByClassName("postit")
-    if (cbVisualizarPostits.checked){
+    if (cbVisualizarPostits.checked) {
         areaPostits.style.display = "block"
         // exibePostits.style.display = "block"
-    } else{
+    } else {
         areaPostits.style.display = "none"
         // exibePostits.style.display = "none"
     }
-    
 }
-// cbVisualizarPostits.setAttribute("checked", true)
+lbVisualizarPostits.appendChild(cbVisualizarPostits)
 
-
-//adiciona os componentes dessa área
 var btAddPostit = document.createElement("button")
 btAddPostit.innerHTML = "Adicione Postit"
 btAddPostit.style.fontWeight = "bold"
 btAddPostit.style.marginTop = "5px"
-btAddPostit.onclick = function (){
-    inserirPostit()
+btAddPostit.onclick = function () {
+    inserirPostit()//Chama a funçãod einserirpostits
 }
 
-var br = document.createElement("br")
-
+//adiciona os componentes dessa área
 divTextoPostit.appendChild(texto)
 divTextoPostit.appendChild(inpTexto)
 divComponentes.appendChild(document.createElement("br"))
+
 divOpacidadePostit.appendChild(lbOpacidade)
 divOpacidadePostit.appendChild(inpOpacidade)
 divOpacidadePostit.appendChild(lbOpacidadeEscolhida)
 divComponentes.appendChild(document.createElement("br"))
 
 divComponentes.appendChild(btAddPostit)
+divComponentes.appendChild(btAddPostit)
+divComponentes.appendChild(document.createElement("br"))
+divComponentes.appendChild(document.createElement("br"))
+
 divComponentes.appendChild(divVisibilidadePostits)
-divVisibilidadePostits.appendChild(cbVisualizarPostits)
+// divVisibilidadePostits.appendChild(cbVisualizarPostits)
 divVisibilidadePostits.appendChild(lbVisualizarPostits)
 
 var areaPostits = document.createElement("div")
@@ -120,28 +140,35 @@ function inserirPostit() {
     postit.style.marginTop = "5px"
     postit.style.marginLeft = "5px"
     postit.style.fontSize = "15px"
-    postit.style.overflow = "auto"
-    postit.style.opacity = `${inpOpacidade.value}%`
+    postit.style.fontWeight = "bold"
+    postit.style.overflow = "auto" //Faz com que, SE o texto interno do Postit for maior que ele, apareçam barras de rolagem internas
+    postit.style.opacity = `${100 - totalOpacidade}%`
     postit.ondblclick = function () {
         postit.style.display = "none"
     }
     postit.style.backgroundColor = gera_cor()
-    postit.onclick = function (){
+    postit.onclick = function () {
         postit.style.backgroundColor = gera_cor()
     }
-    let textOpacidade = document.createElement("p")    
-    textOpacidade.innerHTML = `Opacidade de ${100 - inpOpacidade.value}%`
+    let textOpacidade = document.createElement("p")
+    textOpacidade.innerHTML = `Opacidade de ${totalOpacidade}%`
+    textOpacidade.style.fontWeight = "bold"
     postit.appendChild(textOpacidade)
     areaPostits.appendChild(postit)
 }
 
-function gera_cor(){
+function gera_cor() {
     var hexadecimais = '0123456789ABCDEF';
-    var cor = '#';  
+    var cor = '#';
     // Pega um número aleatório no array acima
-    for (var i = 0; i < 6; i++ ) {
-    //E concatena à variável cor
+    for (var i = 0; i < 6; i++) {
+        //E concatena à variável cor
         cor += hexadecimais[Math.floor(Math.random() * 16)];
     }
     return cor;
+}
+
+function opacidade() {
+    totalOpacidade = inpOpacidade.value    
+    lbOpacidadeEscolhida.innerHTML = `${totalOpacidade}%`
 }
