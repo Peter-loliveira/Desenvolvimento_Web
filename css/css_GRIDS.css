@@ -16,9 +16,11 @@ a{
     font-size: 20PX;
     display: flex;
     flex-wrap: wrap; /* verificar o que faz depois */
-    justify-content: space-between; /* Ajusta os componente que estiverem ho container de forma igual */
+    /* Ajusta os componente que estiverem ho container de forma igual */
+    justify-content: space-between; 
     padding: 20px;
-    align-items: center; /*Alinha os item do conhteiner de forma centralizada na altura*/
+    /* Alinha os item do conhteiner de forma centralizada na altura */
+    align-items: center; 
 }
 
 .menu{
