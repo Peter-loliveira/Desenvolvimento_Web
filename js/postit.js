@@ -38,7 +38,11 @@ function inserirPostit() {
     postit.style.marginTop = "5px"
     postit.style.marginLeft = "5px"
     postit.style.fontSize = "15px"
+    postit.style.overflow = "auto"
     postit.style.backgroundColor = gera_cor()
+    postit.onclick = function (){
+        postit.style.backgroundColor = gera_cor()
+    }
     areaPostits.appendChild(postit)
 }
 
