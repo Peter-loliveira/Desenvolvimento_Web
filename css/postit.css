@@ -4,10 +4,12 @@
 }
 
 .areaComponentes{
+    margin-top: 0 auto;
     background-color: #becfee;
     border-radius: 6px;
     margin-bottom: 1px;
     padding: 10px 0px;
+    text-align: center;
 }
 
 .divs-atributos{
