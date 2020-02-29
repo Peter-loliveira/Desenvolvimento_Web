@@ -58,7 +58,7 @@ inpOpacidade.onmousemove = function () {
 }
 //Evento disparado quando mudamos o valor da opacidade POR TECLADO
 inpOpacidade.onkeydown = function () {
-    opacidade()        
+    opacidade()
 }
 var totalOpacidade = inpOpacidade.value//Guarda o valor da opacidade
 
@@ -85,14 +85,7 @@ var cbVisualizarPostits = document.createElement("input")
 cbVisualizarPostits.setAttribute("type", "checkbox")
 cbVisualizarPostits.checked = true
 cbVisualizarPostits.onclick = function () {
-    let exibePostits = document.getElementsByClassName("postit")
-    if (cbVisualizarPostits.checked) {
-        areaPostits.style.display = "block"
-        // exibePostits.style.display = "block"
-    } else {
-        areaPostits.style.display = "none"
-        // exibePostits.style.display = "none"
-    }
+    morreDiabo()
 }
 lbVisualizarPostits.appendChild(cbVisualizarPostits)
 
@@ -125,6 +118,11 @@ divVisibilidadePostits.appendChild(lbVisualizarPostits)
 
 var areaPostits = document.createElement("div")
 areaPostits.setAttribute("class", "areaComponentes")
+
+var textoAreaPostis = document.createElement("h1")
+textoAreaPostis.innerHTML = "Postits Criados"
+areaPostits.appendChild(textoAreaPostis)
+
 app.appendChild(areaPostits)
 
 function inserirPostit() {
@@ -169,6 +167,17 @@ function gera_cor() {
 }
 
 function opacidade() {
-    totalOpacidade = inpOpacidade.value    
+    totalOpacidade = inpOpacidade.value
     lbOpacidadeEscolhida.innerHTML = `${totalOpacidade}%`
+}
+
+function morreDiabo() {
+    var x = document.getElementsByClassName("postit")
+    for (i = 0; i < x.length; i++) {
+        if (cbVisualizarPostits.checked) {
+            x[i].style.display = "inline-flex"
+        } else {
+            x[i].style.display = "none"
+        }
+    }
 }

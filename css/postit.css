@@ -1,10 +1,8 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
-
-.areaComponentes{
+.areaComponentes {
     margin-top: 0 auto;
     background-color: #becfee;
     border-radius: 6px;
@@ -13,7 +11,7 @@
     text-align: center;
 }
 
-.divs-atributos{
+.divs-atributos {
     margin: 0 auto;
     margin-top: 25px;
     border-radius: 5px;
