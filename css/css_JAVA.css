@@ -37,7 +37,7 @@ button{
 button:hover{
     background-color: #21a021ce;
     color: black;
-    transition: .3s;
+    transition: .3s;    
 }
 
 .botaoGerado{

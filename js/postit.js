@@ -2,34 +2,44 @@
 var app = document.getElementById("Postit")
 
 var divGeral = document.createElement("div")
-divGeral.setAttribute("id", "areaGeral")
+// divGeral.setAttribute("id", "areaGeral")
 divGeral.style.textAlign = "Center"
+// divGeral.style.backgroundColor = "blue"
+
 app.appendChild(divGeral)
 
 var btAddPostit = document.createElement("button")
 btAddPostit.innerHTML = "Adicione Postit"
-btAddPostit.setAttribute("onclick", "inserirPostit()")
+btAddPostit.style.fontWeight = "bold"
+btAddPostit.onclick = function (){
+    inserirPostit()
+}
 var inpTexto = document.createElement("input")
-inpTexto.setAttribute("id", "inputTexto")
 
 var pTexto = document.createElement("p")
 pTexto.innerHTML = "Vamos lá"
 divGeral.appendChild(inpTexto)
 divGeral.appendChild(btAddPostit)
-divGeral.appendChild(pTexto)
+// divGeral.appendChild(pTexto)
+
+var areaPostits = document.createElement("div")
+// areaPostits.style.backgroundColor = "green"
+divGeral.appendChild(areaPostits)
 
 function inserirPostit() {
-    let postit = document.createElement("div")
-    postit.setAttribute("class", "postit")
-    let textoPostit = document.createElement("p")
-    textoPostit.innerHTML = inpTexto.value
+    let postit = document.createElement("button")    
+    postit.innerHTML = inpTexto.value
     postit.style.width = "200px"
     postit.style.height = "200px"
     postit.style.borderRadius = "5px"
+    postit.style.border = "1px solid black"
     postit.style.textAlign = "center"
-    postit.appendChild(textoPostit)
-    divGeral.appendChild(postit)
+    postit.style.marginBottom = "5px"
+    postit.style.marginTop = "5px"
+    postit.style.marginLeft = "5px"
+    postit.style.fontSize = "15px"
     postit.style.backgroundColor = gera_cor()
+    areaPostits.appendChild(postit)
 }
 
 function gera_cor(){

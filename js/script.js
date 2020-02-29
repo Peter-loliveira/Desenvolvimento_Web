@@ -103,9 +103,6 @@ lbFonte.setAttribute("id", "tamanhoFonte")
 lbFonte.setAttribute("font-size", "50")
 divInputNumero.appendChild(lbFonte)
 
-
-
-
 // INICIO DAS funções
 var usuario = "Peter"
 var senha = "123"
@@ -118,15 +115,6 @@ function checaLogin() {
     }
 }
 
-// function gerar() {
-//     let x = parseFloat(document.getElementById("quantidade").value)
-//     for (let i = 1; i <= x; i++) {
-//         var btGerado = document.createElement("button")
-//         btGerado.setAttribute("class", "botaoGerado")
-//         btGerado.innerHTML = "Botão " + i
-//         divComponentes.appendChild(btGerado)
-//     }
-// }
 function gerar() {
     let x = parseFloat(document.getElementById("quantidade").value)
     for (let i = 1; i <= x; i++) {
@@ -143,6 +131,5 @@ function gerar() {
         }
         divComponentes.appendChild(btGerado)
     }
-
 }
 
