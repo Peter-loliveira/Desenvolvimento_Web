@@ -1,19 +1,13 @@
-    // var app = document.getElementById("APP")
-
-    // document.body.style.border = "1px solid black"
-    document.body.style.paddingBottom = "20px"
-    document.body.style.borderRadius = "5px"
-
     var app = document.getElementById("Postit")
     app.style.textAlign = "center"
-    app.style.width = "1400px"
+    app.style.width = "1000px"
     app.style.margin = "0 auto"
     app.style.marginTop = "20px"
     
 
     //Cria uma área só para os componentes que determinarão as caracteristicas e estilos dos postits
     var divComponentes = document.createElement("div")
-    divComponentes.setAttribute("id", "areaGeral")
+    // divComponentes.setAttribute("id", "areaGeral")
     divComponentes.setAttribute("class", "areaComponentes")
     divComponentes.style.textAlign = "Center"
         
