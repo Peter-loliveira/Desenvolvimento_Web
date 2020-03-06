@@ -140,7 +140,6 @@
         postit.style.height = "200px"
         postit.style.borderRadius = "5px"
         postit.style.border = "1px solid black"
-        postit.style.textAlign = "center"
         postit.style.marginBottom = "5px"
         postit.style.marginTop = "5px"
         postit.style.marginLeft = "5px"
@@ -148,13 +147,21 @@
         postit.style.fontWeight = "bold"
         postit.style.overflow = "auto" //Faz com que, SE o texto interno do Postit for maior que ele, apareçam barras de rolagem internas
         postit.style.opacity = `${100 - totalOpacidade}%`
+        
         postit.ondblclick = function () {
             postit.style.display = "none"
         }
+        
         postit.style.backgroundColor = gera_cor()
+        
         postit.onclick = function () {
             postit.style.backgroundColor = gera_cor()
         }
+
+        if(!cbVisualizarPostits.checked){
+            postit.style.display = "none"
+        }
+
         let textOpacidade = document.createElement("p")
         textOpacidade.innerHTML = `Opacidade de ${totalOpacidade}%`
         textOpacidade.style.fontWeight = "bold"
@@ -183,8 +190,18 @@
         for (i = 0; i < x.length; i++) {
             if (cbVisualizarPostits.checked) {
                 x[i].style.display = "inline-flex"
+                x[i].textAlign = "center"
             } else {
                 x[i].style.display = "none"
             }
         }
+    }
+
+    switch (key) {
+        case value:
+            
+            break;
+    
+        default:
+            break;
     }

@@ -9,3 +9,9 @@ function calcula() {
         var media = (nota1 + nota2 + nota3 + nota4) / 4
         document.getElementById("resultado").value = media
 }
+
+
+function name(params) {
+        
+}
+
