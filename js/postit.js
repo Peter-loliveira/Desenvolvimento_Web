@@ -186,13 +186,12 @@
     }
 
     function morreDiabo() {
-        var x = document.getElementsByClassName("postit")
-        for (i = 0; i < x.length; i++) {
+        var totalPostits = document.getElementsByClassName("postit")
+        for (i = 0; i < totalPostits.length; i++) {
             if (cbVisualizarPostits.checked) {
-                x[i].style.display = "inline-flex"
-                x[i].textAlign = "center"
+                totalPostits[i].style.display = "inline-flex"
             } else {
-                x[i].style.display = "none"
+                totalPostits[i].style.display = "none"
             }
         }
     }
