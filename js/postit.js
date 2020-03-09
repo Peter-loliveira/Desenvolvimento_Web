@@ -224,9 +224,8 @@ function ligarDanceteria(voltas) {
     let totalPostitsVoltas = document.getElementsByClassName("postit")
     for (a = 1; a < voltas; a++) {
         for (b = 0; b <= totalPostitsVoltas.length; b++) {
-            let cor = gera_cor()
-            totalPostitsVoltas[b].style.backgroundColor = cor
-            // alert(`Volta ${a} - ${b} - ${cor}`)
+            // totalPostitsVoltas[b].style.backgroundColor = cor
+            alert(`Volta ${a} - ${b} - ${gera_cor()}`)
             // alert(totalPostitsVoltas)
         }
     }
